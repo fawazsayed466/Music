@@ -4,7 +4,7 @@ import youtube_dl
 from discord.ext import commands
 import os
 
-bot = commands.Bot(command_prefix='a.')
+bot = commands.Bot(command_prefix='1')
 bot.remove_command('help')
 from discord import opus
 OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll',
@@ -87,7 +87,7 @@ async def queue_songs(con,clear):
             servers_songs[con.message.server.id]=song
             servers_songs[con.message.server.id].start()
             await bot.delete_message(now_playing[con.message.server.id])
-            msg=await bot.send_message(con.message.channel,"Now playing")
+            msg=await bot.send_message(con.message.channel,"Now playing✅")
             now_playing[con.message.server.id]=msg
 
             if len(song_names[con.message.server.id]) >= 1:
@@ -128,7 +128,7 @@ async def play(con,*,url):
                 song=await bot.voice_client_in(con.message.server).create_ytdl_player(song_names[con.message.server.id][0], ytdl_options=opts, after=lambda: bot.loop.create_task(after_song(con,False)))
                 servers_songs[con.message.server.id]=song
                 servers_songs[con.message.server.id].start()
-                msg = await bot.send_message(con.message.channel, "Now playing {}".format(servers_songs[con.message.server.id].title))
+                msg = await bot.send_message(con.message.channel, "Now playing✅ {}".format(servers_songs[con.message.server.id].title))
                 now_playing[con.message.server.id]=msg
                 song_names[con.message.server.id].pop(0)
 
