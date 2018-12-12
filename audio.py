@@ -228,10 +228,6 @@ async def on_message(message):
         await bot.send_message(message.channel, "**Paused Successfully**|✅")
         
 
-@bot.event
-async def on_ready():
-  await bot.change_presence(game=discord.Game(name="Silver Music / 1play",type=3)) 
-        
       
       
       
