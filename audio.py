@@ -218,6 +218,17 @@ async def resume(con):
                 paused[con.message.server.id]=False
 
 
+                
+                
+                
+@bot.event
+async def on_ready():
+  await bot.change_presence(game=discord.Game(name='Silver Community / 1play'r type = Watching))            
+                
+                
+                
+                
+                
 bot.run(os.environ['BOT_TOKEN'])
 
 #   run multiple functions after the play for loop
