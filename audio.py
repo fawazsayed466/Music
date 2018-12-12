@@ -222,11 +222,6 @@ async def resume(con):
                 
                             
       
-@bot.event
-async def on_message(message):
-    if message.content == "1skip":
-        await bot.send_message(message.channel, "**Paused Successfully**|✅")
-        
 
       
       
