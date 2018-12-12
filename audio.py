@@ -217,12 +217,7 @@ async def resume(con):
                 servers_songs[con.message.server.id].resume()
                 paused[con.message.server.id]=Fals
                 
-                
-@bot.event
-async def on_ready():
-  await bot.change_presence(game=discord.Game(name='Hello!'r type = 3))                
-                
-            
+                            
       
       
       
