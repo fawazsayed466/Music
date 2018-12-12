@@ -215,20 +215,19 @@ async def resume(con):
                 await bot.send_message(con.message.channel,"**Audio already playing**")
             if paused[con.message.server.id] ==True:
                 servers_songs[con.message.server.id].resume()
-                paused[con.message.server.id]=False
-
-
-                
+                paused[con.message.server.id]=Fals
                 
                 
 @bot.event
 async def on_ready():
-  await bot.change_presence(game=discord.Game(name='Silver Community / 1play'r type = 3))            
+  await bot.change_presence(game=discord.Game(name='Hello!'r type = 3))                
                 
-                
-                
-                
-                
+            
+      
+      
+      
+      
+      
 bot.run(os.environ['BOT_TOKEN'])
 
 #   run multiple functions after the play for loop
