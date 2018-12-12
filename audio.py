@@ -58,8 +58,20 @@ async def on_ready():
     bot.loop.create_task(bg())
     print(bot.user.name)
 
+        
+@bot.event
+async def on_message(message):
+    if message.content == "1skip":
+        await bot.send_message(message.channel, "Paused Successfully|✅")
+        
 
-
+@bot.event
+async def on_ready():
+  await bot.change_presence(game=discord.Game(name="Silver Music / 1play",type=3)) 
+  
+  
+  
+  
 @bot.event
 async def on_reaction_add(react,user):
     pass
