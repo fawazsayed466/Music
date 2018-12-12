@@ -62,7 +62,7 @@ async def on_ready():
 @bot.event
 async def on_message(message):
     if message.content == "1skip":
-        await bot.send_message(message.channel, "Paused Successfully|✅")
+        await bot.send_message(message.channel, "**Paused Successfully**|✅")
         
 
 @bot.event
