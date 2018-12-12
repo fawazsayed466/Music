@@ -223,7 +223,7 @@ async def resume(con):
                 
 @bot.event
 async def on_ready():
-  await bot.change_presence(game=discord.Game(name='Silver Community / 1play'r type = Watching))            
+  await bot.change_presence(game=discord.Game(name='Silver Community / 1play'r type = 3))            
                 
                 
                 
